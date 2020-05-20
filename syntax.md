@@ -3,21 +3,24 @@
 ## Table of Contents
 
 1. [variables](#variables)
-1.1 [pointers](#pointers)
-1.2 [naming of variables](#naming-of-variables)
+  1.1 [pointers](#pointers)
+  1.2 [naming of variables](#naming-of-variables)
+
 2. [main structure](#main-structure)
+
 3. [functions](#functions)
-3.1 [closures](#closures)
-3.2 [for](#for)
-3.3 [forever](#forever)
-3.4 [if](#if)
-3.5 [switch](#switch)
-3.6 [defer](#defer)
+  3.1 [closures](#closures)
+  3.2 [for](#for)
+  3.3 [forever](#forever)
+  3.4 [if](#if)
+  3.5 [switch](#switch)
+  3.6 [defer](#defer)
+
 4. [data structures](#data-structures)
-4.1 [structs](#structs)
-4.2 [arrays](#arrays)
-4.3 [slices](#slices)
-4.4 [maps](#maps)
+  4.1 [structs](#structs)
+  4.2 [arrays](#arrays)
+  4.3 [slices](#slices)
+  4.4 [maps](#maps)
 
 ## variables
 
@@ -280,7 +283,7 @@ var (
 )
 ```
 
-### arrays
+### arrays
 
 arrays can't be resized (can be solved using `make`)
 
