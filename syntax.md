@@ -84,7 +84,7 @@ for ; sum < 1000; { //init and post components are optional
  }
 ```
 
-###forever
+### forever
 
 ```go
 
@@ -127,7 +127,9 @@ switch os := runtime.GOOS; os {
     fmt.Printf("%s.\n", os)
     }
 ```
+
 switches without consitions are if-else statements.
+
 ```go
 switch {
  case t.Hour() < 12:
