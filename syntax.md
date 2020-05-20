@@ -1,14 +1,35 @@
 # Syntax
 
+## Table of Contents
+
+1. [variables](#variables)
+1.1 [pointers](#pointers)
+1.2 [naming of variables](#naming-of-variables)
+2. [main structure](#main-structure)
+3. [functions](#functions)
+3.1 [closures](#closures)
+3.2 [for](#for)
+3.3 [forever](#forever)
+3.4 [if](#if)
+3.5 [switch](#switch)
+3.6 [defer](#defer)
+4. [data structures](#data-structures)
+4.1 [structs](#structs)
+4.2 [arrays](#arrays)
+4.3 [slices](#slices)
+4.4 [maps](#maps)
+
 ## variables
 
 Variables can be declared both in package or function level.
+can't redeclare, but can shadow (redeclare at lower scope)
+all variables have to be used (compile error)
 
 ```go
 var x, y, z int
 var year, month int = 1997, 4 //same with var year, month = 1997, 4
 var t, f, str = true, false , "string"
-variable := 5 // := is short assignment and only works within function
+variable := 5 // := only works on function level
 var (
     x int    // 0
     y string // ""
@@ -19,7 +40,31 @@ var (
 `const` exists but cant be used with `:=`
 defaults for int, bool and string are `0 , false, ""`
 
+### pointers
+
+`*t` is a pointer to a t value. its zero value is `nil`.
+
+```go
+
+i := 42
+p := &i         // point to i
+fmt.Println(*p) // read i through the pointer
+*p = 21         // set i through the pointer
+fmt.Println(i)  // see the new value of i ->21
+```
+
+### naming of variables
+
+`Foo` exported from package
+`foo` within scope or function
+
+capitalize acronyms such as HTTP and URL
+
+---
+
 ## main structure
+
+execution starts from the `main` package's `main`function.
 
 ```go
 package main
@@ -38,6 +83,8 @@ Only exported names of packages can be used. Make the first letter capital to ex
 
 - math.Pi✔️
 - math.pi✖️
+
+---
 
 ## functions
 
@@ -192,19 +239,6 @@ func main() {
 
  fmt.Println("hello")
 } //prints hello world
-```
-
-### pointers
-
-`*t` is a pointer to a t value. its zero value is `nil`.
-
-```go
-
-i := 42
-p := &i         // point to i
-fmt.Println(*p) // read i through the pointer
-*p = 21         // set i through the pointer
-fmt.Println(i)  // see the new value of i ->21
 ```
 
 ---
